@@ -40,7 +40,8 @@ function addElement() {
 window.onload = addElement;
 
 
-
+// need to have jquery for this to work
+/*
 $(function() {
 
   var lastP = $("p")[1];
@@ -51,3 +52,5 @@ $(function() {
     $(this).unbind('click');
   });
 });
+
+*/
