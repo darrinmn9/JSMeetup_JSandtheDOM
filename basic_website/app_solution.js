@@ -1,4 +1,4 @@
-function addElement(){
+function addElement() {
 
   var myDiv = document.getElementById('entry1');
   var lastP = document.getElementsByTagName('p')[1];
@@ -21,12 +21,19 @@ function addElement(){
 
 
 
-  var myAlert = function(){
+  lastP.addEventListener('click', function(event) {
+    event.stopPropagation();
     alert("i've been clicked");
-    lastP.removeEventListener('click', myAlert);
-  };
+  }, false);
 
-  lastP.addEventListener('click', myAlert);
+
+  // window.addEventListener('click', function() {
+  //   alert('window bubble');
+  // });
+
+  // window.addEventListener('click', function(){
+  //   alert('window capture');
+  // }, true);
 
 }
 
@@ -39,12 +46,12 @@ window.onload = addElement;
 
 
 
-$(function(){
+$(function() {
 
   var lastP = $("p")[1];
   lastP.before("<p>Recently added!</p>");
 
-  lastP.click(function(){
+  lastP.click(function() {
     alert("i've been clicked");
     $(this).unbind('click');
   });
