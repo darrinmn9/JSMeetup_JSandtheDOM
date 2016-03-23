@@ -6,14 +6,9 @@ function addElement() {
 
   //create an Element node
   var newP = document.createElement("p");
-  newP.innerHTML = "Recently added!";
 
   //create a Text node
-  // var newContent = document.createTextNode("Recently added!");
-
-
-  //add the text node to the newly created div.
-  // newP.appendChild(newContent);
+  newP.innerHTML = "Recently added!";
 
   // add the newly created element and its content into the DOM
   myDiv.insertBefore(newP, lastP);
